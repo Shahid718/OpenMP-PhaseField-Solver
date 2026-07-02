@@ -1,0 +1,3 @@
+
+rmdir /s /q build && mkdir build && cd build && cmake .. -G "NMake Makefiles" -DCMAKE_Fortran_COMPILER=ifx -DCMAKE_BUILD_TYPE=Release -DWITH_OPENMP=ON && cmake --build . && bin\cahn_hilliard_driver.exe
+

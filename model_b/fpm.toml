@@ -1,0 +1,23 @@
+name = "cahn_hilliard"
+version = "1.0.0"
+license = "MIT"
+author = "Shahid Maqbool"
+maintainer = "shahid718@gmail.com"
+copyright = "Copyright 2026, MIT"
+
+[build]
+auto-executables = true
+
+[dev-dependencies]
+
+[dependencies]
+openmp = "*"
+
+[features]
+openmp.description = "Enable OpenMP parallelization"
+openmp.dependencies.openmp = "*"
+openmp.preprocess.cpp.macros = ["USE_OPENMP"]
+
+[profiles]
+parallel = ["openmp"]
+serial = []
